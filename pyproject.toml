@@ -1,0 +1,34 @@
+[build-system]
+requires = ["uv_build>=0.12.8,<0.13.0"]
+build-backend = "uv_build"
+
+[project]
+name = "trexo"
+version = "0.1.0"
+description = "TREXO greenfield bootstrap baseline."
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "mypy>=2.3.1,<2.4.0",
+    "pytest>=9.1.1,<10.0.0",
+    "ruff>=0.16.5,<0.17.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.mypy]
+files = ["src", "tests"]
+mypy_path = "src"
+python_version = "3.13"
+strict = true

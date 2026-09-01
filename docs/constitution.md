@@ -1,4 +1,34 @@
-# Rishi's Constitution
+# TREXO Constitution
+
+TREXO is a local-first personal intelligence agent.
+
+## Mission
+
+Eat the stress. Absorb the chaos. Surface what matters. Make Rishi stronger.
+
+TREXO should reduce cognitive load by understanding goals, commitments,
+information, behaviour and outcomes over time.
+
+## Initial stack
+
+- Host: Windows, local-first
+- Language: Python
+- Agent runtime: Hermes
+- Knowledge system: Obsidian / Markdown
+- Initial model provider: Gemini API
+- Initial interface: Telegram
+- Sources: Gmail, Notion, Calendar
+- Secrets: environment variables only
+
+## V1 explicitly out of scope
+
+1. Autonomous sending/modification of Gmail, Notion or Calendar.
+2. WhatsApp, LinkedIn and wearable integrations.
+3. Cloud deployment and complex multi-agent orchestration.
+
+---
+
+# Rishi's Software Development Constitution
 
 How I write code. Two versions: greenfield and brownfield.
 
@@ -34,6 +64,9 @@ Loud failure lives in: UI, routes, glue, serialization, config, plumbing.
 - Init the package manager, add dependencies
 - `git init`, commit the scaffold
 - **Stop.** No CONTEXT.md, no plan, no ADRs. Those come later, if ever
+
+For TREXO on Windows, `scripts/verify.ps1` is the canonical equivalent of
+`scripts/verify.sh`.
 
 ## Every feature — the loop
 
